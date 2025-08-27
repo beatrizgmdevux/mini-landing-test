@@ -7,12 +7,15 @@
   min-height: calc(100vh - $header-h);
   display: grid;
   align-items: center;
+  place-items: center;
   padding-top: $header-h;
-  background: radial-gradient(
-    80% 60% at 70% 10%,
-    rgba($color-primary, .15)
-    transparent 60%
-  )
+  background:
+    radial-gradient(
+      80% 60% at 70% 10%,
+      rgba($color-primary, .15) 0%,
+      transparent 60%
+    ),
+    $color-bg;
 }
 .hero__inner { 
   padding-block: $space-12;

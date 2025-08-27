@@ -309,6 +309,14 @@
 .site-nav__list a {
   padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
+  color: #1e1e1e;
+  font-weight: bold;
+}
+
+.site-nav__list a:hover,
+.site-nav__list a:focus-visible {
+  color: #b100f1;
+  text-decoration: none;
 }
 
 @media (min-width: 1024px) {

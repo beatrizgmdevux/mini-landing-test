@@ -38,6 +38,14 @@
 .site-nav__list a {
   padding: .25rem .5rem;
   border-radius: .5rem;
+  color: $color-text;
+  font-weight: bold;
+}
+
+.site-nav__list a:hover,
+.site-nav__list a:focus-visible {
+    color: $color-primary;
+    text-decoration: none;
 }
 
 @include mq-desktop {

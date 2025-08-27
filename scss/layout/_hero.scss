@@ -14,9 +14,19 @@
     transparent 60%
   )
 }
-.hero__inner { padding-block: $space-12; }
+.hero__inner { 
+  padding-block: $space-12;
+  display: grid;
+  place-items: center;
+
+}
 .hero__copy {
   max-width: 60ch; // 60 caracteres por línea
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .lead { color: $color-muted; font-size: 1.2rem; }
 

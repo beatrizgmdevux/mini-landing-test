@@ -29,14 +29,14 @@
 }
 
 .btn--ghost {
-  background: rgba(69, 219, 229, 0.12);
+  background: rgba(250, 250, 250, 0.2);
   color: #1e1e1e;
-  border-color: rgba(30, 30, 30, 0.35);
+  border: 1px solid rgba(30, 30, 30, 0.35);
 }
 
 .btn--ghost:hover, .btn--ghost:focus-visible {
-  background: rgba(69, 219, 229, 0.12);
-  border-color: rgba(30, 30, 30, 0.35);
+  background: rgba(69, 219, 229, 0.75);
+  border: 1px solid rgba(30, 30, 30, 0.35);
 }
 
 /** Estilos de las cards
@@ -247,10 +247,17 @@
 
 .hero__inner {
   padding-block: 3rem;
+  display: grid;
+  place-items: center;
 }
 
 .hero__copy {
   max-width: 60ch;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .lead {
@@ -275,7 +282,7 @@
 .nav-toggle__bar {
   width: 22px;
   height: 2px;
-  background: #1e1e1e;
+  background: #b100f1;
   display: block;
 }
 

@@ -27,11 +27,11 @@
 }
 
 .btn--ghost {
-  background: rgba($color-focus,.12);
+  background: rgba($color-bg, .20);
   color: $color-text;
-  border-color: rgba($color-text,.35);
+  border: 1px solid rgba($color-text,.35);
 }
 .btn--ghost:hover, .btn--ghost:focus-visible {
-  background: rgba($color-focus,.12);
-  border-color: rgba($color-text,.35);
+  background: rgba($color-focus, .75);
+  border: 1px solid rgba($color-text,.35);
 }

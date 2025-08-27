@@ -13,7 +13,8 @@
 }
 .nav-toggle:focus-visible { @include focus-ring; }
 .nav-toggle__bar {
-  width: 22px; height: 2px; background: $color-text;
+  width: 22px; height: 2px; 
+  background: $color-primary;
   display: block;
 }
 
@@ -24,8 +25,11 @@
   display: block;
 }
 .site-nav__list {
-  list-style: none; margin: 0; padding: 0;
-  display: grid; gap: $space-2;
+  list-style: none; 
+  margin: 0; 
+  padding: 0;
+  display: grid; 
+  gap: $space-2;
   background: rgba(0,0,0,.35);
   padding: $space-4;
   border-radius: $radius;

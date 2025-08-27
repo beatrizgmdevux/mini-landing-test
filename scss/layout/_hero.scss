@@ -8,11 +8,15 @@
   display: grid;
   align-items: center;
   padding-top: $header-h;
-  background: radial-gradient(80% 60% at 70% 10%, rgba(106,169,255,.15), transparent 60%);
+  background: radial-gradient(
+    80% 60% at 70% 10%,
+    rgba($color-primary, .15)
+    transparent 60%
+  )
 }
 .hero__inner { padding-block: $space-12; }
 .hero__copy {
-  max-width: 60ch;
+  max-width: 60ch; // 60 caracteres por línea
 }
 .lead { color: $color-muted; font-size: 1.2rem; }
 

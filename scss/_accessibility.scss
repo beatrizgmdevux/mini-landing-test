@@ -1,0 +1,7 @@
+@use "abstracts/variables" as *;
+@use "abstracts/mixins" as *;
+
+// scss/_accessibility.scss
+
+a, button { transition: outline-color .2s ease; }
+a:focus-visible, button:focus-visible { outline-offset: 3px; }

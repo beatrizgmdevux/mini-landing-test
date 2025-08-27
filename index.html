@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Título y descripción -->
+    <title>Mini Landing — Prueba Técnica ClickToTravel</title>
+    <meta name="description" content="Mini landing responsive accesible con HTML semántico y SCSS modular para ClickToTravel" />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="dist/styles.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpg" href="public/logo.jpg">
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="#Inicio" aria-label="Inicio">
+          <span class="brand_name">
+            <img src="public/logo.jpg" alt="Logo oficial ClickToTravel" class="brand_logo">
+          </span>
+          <span class="brand_name">
+            ClickToTravel
+          </span>
+        </a>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+
+        <nav id="primary-nav" class="site-nav" aria-label="Navegación principal">
+          <ul class="site-nav__list">
+            <li><a href="#caracteristicas">Inicio</a></li>
+            <li><a href="#precios">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <h1 id="hero-title">Ejemplo de Página de Inicio</h1>
+            <p class="lead">Esta es una página de inicio simple</p>
+            <button class="btn btn--primary" href="#caracteristicas">Empezar</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="caracteristicas" class="cards" aria-labelledby="cards-title">
+        <div class="container">
+          <div class="cards__grid">
+            <article class="card">
+              <picture class="card__media">
+                <source srcset="public/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg" type="image/jpeg" />
+                <img src="public/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg" width="1200" height="800" alt="Paisaje de un valle con montañas muy altas nevadas desde una cordillera con altos pinos verdes." loading="lazy" />
+              </picture>
+              <div class="card__body">
+                <h3>Culpa nostrud ut aliquip ullamco officia id.</h3>
+                <p>Voluptate mollit ut incididunt pariatur sint ad. Aute adipisicing culpa ut mollit dolore excepteur aliquip incididunt laboris dolor anim sint eu. Occaecat cillum eiusmod id officia non nostrud pariatur magna dolore sunt.</p>
+                <a class="btn btn--ghost card__cta" href="#" aria-label="Más info sobre Culpa nostrud ut aliquip ullamco officia id.">Más info</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <picture class="card__media">
+                <source srcset="public/mark-harpur-K2s_YE031CA-unsplash.jpg" type="image/jpeg" />
+                <img src="public/mark-harpur-K2s_YE031CA-unsplash.jpg" width="1200" height="800" alt="Paisaje al atardecer cuando el cielo ya tiene colores anaranjados y morados de un lago al que llegas por un camino rodeado de flores en tonos morados y rosas." loading="lazy" />
+              </picture>
+              <div class="card__body">
+                <h3>Irure duis esse Lorem laboris officia ad commodo excepteur consequat laboris ullamco nostrud.</h3>
+                <p>Sit irure nisi exercitation cillum quis mollit. Irure esse ipsum irure ex ea. Sint elit consectetur minim velit quis consequat enim amet ullamco id amet ea elit amet. Pariatur ut ullamco cupidatat id nulla veniam consectetur cillum enim eu tempor. Qui officia incididunt id nisi.</p>
+                <a class="btn btn--ghost card__cta" href="#" aria-label="Más info sobre Irure duis esse Lorem laboris officia ad commodo excepteur consequat laboris ullamco nostrud.">Más info</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <picture class="card__media">
+                <source srcset="public/pietro-de-grandi-T7K4aEPoGGk-unsplash.jpg" type="image/jpeg" />
+                <img src="public/pietro-de-grandi-T7K4aEPoGGk-unsplash.jpg" width="1200" height="800" alt="Paisaje de un precioso lago de aguas cristalinas entre altas montañas rocosas bajo un cielo azul brillante donde hay personas en barcas navegando." loading="lazy" />
+              </picture>
+              <div class="card__body">
+                <h3>Pariatur nulla eu consectetur dolor.</h3>
+                <p>Ex irure adipisicing incididunt sint ex cillum id elit. Ullamco velit velit ea sunt laboris velit. Laborum officia occaecat minim quis ea est deserunt laboris. Dolor fugiat et cupidatat aliquip consectetur fugiat enim Lorem culpa nisi. Reprehenderit ex irure aliquip adipisicing.</p>
+                <a class="btn btn--ghost card__cta" href="#" aria-label="Más info sobre Pariatur nulla eu consectetur dolor.">Más info</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <!-- Enlaces interés -->
+        <nav aria-label="Enlaces del pie">
+          <ul class="footer-links">
+            <li><a href="#">Términos</a></li>
+            <li><a href="#">Privacidad</a></li>
+            <li><a href="#">Soporte</a></li>
+          </ul>
+        </nav>
+
+        <!-- Redes sociales -->
+        <ul class="social">
+          <li><a href="#" aria-label="Twitter">
+            <img class="logo-footer" src="/public/instagram.png" alt="Logo oficial de Instagram que enlaza con la página oficial." loading="lazy" >
+          </a></li>
+          <li><a href="#" aria-label="LinkedIn">
+            <img class="logo-footer" src="/public/linkedin.png" alt="Logo oficial de LinkedIn que enlaza con la página oficial." loading="lazy" >
+          </a></li>
+          <li><a href="#" aria-label="GitHub">
+            <img class="logo-footer" src="/public/github.png" alt="Logo oficial de GitHub que enlaza con la página oficial." loading="lazy" >
+          </a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+@use "abstracts/variables" as *;
+@use "abstracts/mixins" as *;
+
+// scss/_base.scss
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { color-scheme: light; }
+
+body {
+  margin: 0;
+  font-family: $font-family-base;
+  color: $color-text;
+  background: linear-gradient(180deg, $color-bg 0%, $color-surface 100%);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: $color-primary; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+:focus-visible { @include focus-ring; }
+
+.container { @include container; }
+
+.skip-link {
+  @include hide-visually;
+}
+
+.skip-link:focus {
+  position: fixed !important;
+  inset: $space-4 auto auto $space-4;
+  z-index: 10000;
+  width: auto; height: auto;
+  padding: $space-3 $space-4;
+  background: $color-focus;
+  color: #000;
+  border-radius: .5rem;
+  clip: auto; white-space: normal;
+}

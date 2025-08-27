@@ -1,0 +1,65 @@
+// scss/components/_cards.scss
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+
+/** Estilos de las cards
+    * Una columna en formato móvil (por defecto)
+    * Dos columnas en formato tablet
+    * Tres columnas en formato desktop
+    * En formato móvil y tablet el botón aparece siempre para más información
+    * En formato desktop el botón aparecerá cuando hagamos hover por la card
+*/
+.cards {
+  padding-block: $space-12;
+}
+
+.cards__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-8;
+}
+
+@include mq-tablet {
+  .cards__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@include mq-desktop {
+  .cards__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.card {
+  background: rgba($color-bg,.04);
+  border: 1px solid rgba($color-bg,.1);
+  border-radius: $radius;
+  overflow: clip;
+  box-shadow: $shadow;
+  display: grid;
+}
+.card__media img { width: 100%; height: auto; }
+.card__body { padding: $space-6; display: grid; gap: $space-4; }
+.card__cta {
+  display: inline-block; 
+  opacity: 1;              // botón visible en móvil por defecto.
+  transform: translateY(0);
+  transition: opacity .3s ease, transform .3s ease;
+}
+
+@include mq-desktop {
+  .card__cta {
+    display: none;  // oculto el botón para pantallas grandes
+    pointer-events: none; // no clicable mientras esté oculto
+    transform: translateY(10px);
+  } 
+  .card:hover .card__cta,
+  .card:focus-within .card__cta {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0); // vuelve a su posición
+  }
+}
+
+.cta {
+  padding-block: $space-12;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0));
+}

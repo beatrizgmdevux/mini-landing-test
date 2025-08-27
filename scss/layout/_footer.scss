@@ -1,0 +1,97 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// scss/layout/_footer.scss
+
+/** 
+    * Footer responsive aplicando los estilos por defecto para móvil.
+    * Los enlaces aparecerán en una columna y las redes sociales en otra.
+    * En pantallas más grandes todo queda alineado en una fila.
+*/
+
+.site-footer {
+  padding-block: $space-8;
+  border-top: 1px solid rgba(255,255,255,.08);
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: $space-4;
+  align-items: center;
+}
+
+.footer-links, 
+.social {
+  list-style: none; 
+  margin: 0; 
+  padding: 0;
+  display: grid; 
+  gap: $space-2; 
+  grid-auto-flow: column; 
+  width: max-content;
+}
+
+// Estilos de texto normal aplicado a los enlaces
+.footer-links {
+    grid-auto-flow: row;
+}
+
+.footer-links li a {
+    color: $color-text;
+}
+
+.social {
+    grid-template-columns: repeat(2, minmax(0 ,1fr));
+    justify-items: stretch;
+}
+
+.social li { list-style: none; }
+
+.social a {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    padding: $space-2;
+    border-radius: $space-2;
+    background: rgba($color-dark-bg, .06);
+    border: 1px solid rgba($color-dark-bg, .12);
+}
+
+.social a:hover,
+.social a:focus-visible {
+    background: rgba($color-dark-bg, .12);
+    border-color: rgba($color-dark-bg, .24);
+}
+
+.logo-footer {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+// Versión para pantallas grandes
+@include mq-desktop {
+  .footer-inner {
+    grid-template-columns: 1fr auto; /* enlaces ocupan, redes ancho contenido */
+    align-items: center;
+  }
+
+  /* Enlaces en fila */
+  .footer-links {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: $space-4;
+  }
+
+  /* Redes en fila */
+  .social {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;   /* cada icono ocupa su contenido */
+    gap: $space-3;
+  }
+}

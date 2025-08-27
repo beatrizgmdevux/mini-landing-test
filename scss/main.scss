@@ -1,0 +1,18 @@
+// scss/main.scss
+
+// abstracts
+@use "abstracts/variables" as *;
+@use "abstracts/mixins" as *;
+
+// componentes
+@use "components/buttons" as *;
+@use "components/cards" as *;
+
+// layout
+@use "layout/footer" as *;
+@use "layout/header" as *;
+@use "layout/hero" as *;
+@use "layout/nav" as *;
+
+@use "accessibility";
+@use "base";

@@ -1,0 +1,37 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// scss/components/_buttons.scss
+// Botones
+.btn {
+  display: inline-block;
+  padding: .85rem 1.15rem;
+  border-radius: .75rem;
+  font-weight: 600;
+  letter-spacing: .2px;
+  border: 2px solid transparent;
+  transition: transform .2s ease, background-color .2s ease, border-color .2s ease;
+  will-change: transform;
+}
+
+.btn:active { transform: translateY(1px); }
+.btn:hover { cursor: pointer; }
+
+.btn--primary {
+  background: $color-primary;
+  color: $color-primary-contrast;
+  border-color: transparent;
+}
+.btn--primary:hover, .btn--primary:focus-visible {
+  filter: brightness(1.05);
+}
+
+.btn--ghost {
+  background: rgba($color-focus,.12);
+  color: $color-text;
+  border-color: rgba($color-text,.35);
+}
+.btn--ghost:hover, .btn--ghost:focus-visible {
+  background: rgba($color-focus,.12);
+  border-color: rgba($color-text,.35);
+}

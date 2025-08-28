@@ -13,13 +13,17 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/jpg" href="public/logo.jpg">
+    
+    <!-- JS -->
     <script src="js/main.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
+    <!-- Logo Inicio con navegación principal en el header (burgermenu para pantallas pequeñas) -->
     <header class="site-header" role="banner">
       <div class="container header-inner">
+        <!-- Logo clicable para volver a inicio -->
         <a class="brand" href="#inicio" aria-label="Inicio">
           <span class="brand_name">
             <img src="public/logo.jpg" alt="Logo oficial ClickToTravel" class="brand_logo">
@@ -29,12 +33,14 @@
           </span>
         </a>
 
+        <!-- Burgermenu -->
         <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú">
           <span class="nav-toggle__bar"></span>
           <span class="nav-toggle__bar"></span>
           <span class="nav-toggle__bar"></span>
         </button>
 
+        <!-- Navegación de la web -->
         <nav id="primary-nav" class="site-nav" aria-label="Navegación principal">
           <ul class="site-nav__list">
             <li><a href="#inicio">Inicio</a></li>
@@ -45,6 +51,7 @@
       </div>
     </header>
 
+    <!-- Contenido principal -->
     <main id="contenido">
       <section class="hero" aria-labelledby="hero-title">
         <div class="container hero__inner">
@@ -59,6 +66,7 @@
       <section id="caracteristicas" class="cards" aria-labelledby="cards-title">
         <div class="container">
           <div class="cards__grid">
+            <!-- CARD 1 -->
             <article class="card">
               <picture class="card__media">
                 <source srcset="public/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg" type="image/jpeg" />
@@ -71,6 +79,7 @@
               </div>
             </article>
 
+            <!-- CARD 2 -->
             <article class="card">
               <picture class="card__media">
                 <source srcset="public/mark-harpur-K2s_YE031CA-unsplash.jpg" type="image/jpeg" />
@@ -83,6 +92,7 @@
               </div>
             </article>
 
+            <!-- CARD 3 -->
             <article class="card">
               <picture class="card__media">
                 <source srcset="public/pietro-de-grandi-T7K4aEPoGGk-unsplash.jpg" type="image/jpeg" />
@@ -98,7 +108,8 @@
         </div>
       </section>
     </main>
-
+    
+    <!-- Pie de página con enlaces y redes sociales -->
     <footer class="site-footer" role="contentinfo">
       <div class="container footer-inner">
         <!-- Enlaces interés -->

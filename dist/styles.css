@@ -210,6 +210,23 @@ a.btn:active {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
 }
 
+/* Estilos específicos de los botones dentro de la card */
+.card .btn--ghost {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: #b100f1;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.card .btn--ghost:hover,
+.card .btn--ghost:focus-visible {
+  text-decoration: underline;
+  color: rgb(150.45, 0, 204.85);
+}
+
 /** 
     * Footer responsive aplicando los estilos por defecto para móvil.
     * Los enlaces aparecerán en una columna y las redes sociales en otra.

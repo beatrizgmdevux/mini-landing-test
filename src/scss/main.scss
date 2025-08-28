@@ -4,8 +4,8 @@
 @use "accessibility";
 
 // abstracts
-@use "abstracts/variables" as *;
-@use "abstracts/mixins" as *;
+@use "theme/variables" as *;
+@use "theme/mixins" as *;
 
 // componentes
 @use "components/buttons" as *;

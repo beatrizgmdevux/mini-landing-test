@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "sass --watch scss/main.scss:dist/styles.css --style=expanded --no-source-map",
-    "build": "sass scss/main.scss:dist/styles.css --style=compressed --no-source-map",
-    "preview": "python3 -m http.server 5173"
+    "dev": "concurrently \"sass --watch src/scss/main.scss:dist/styles.css --style=expanded --no-source-map\" \"http-server . -p 5173 -c-1\"",
+    "build": "sass src/scss/main.scss:dist/styles.css --style=compressed --no-source-map"
   },
+
   "devDependencies": {
+    "concurrently": "^9.2.1",
+    "http-server": "^14.1.1",
     "sass": "^1.77.0"
   }
 }

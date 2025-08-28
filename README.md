@@ -30,7 +30,7 @@ Proyecto realizado como prueba técnica para el puesto de **Maquetación UI en C
 .
 ├── index.html              # Página principal
 ├── scss/                   # Estilos SCSS organizados por módulos
-│   ├── abstracts/          # Variables y mixins
+│   ├── theme/              # Variables y mixins
 │   ├── components/         # Botones, cards, etc.
 │   ├── layout/             # Header, nav, hero, footer, services
 │   ├── _base.scss          # Estilos globales
@@ -45,16 +45,13 @@ Proyecto realizado como prueba técnica para el puesto de **Maquetación UI en C
 
 ---
 
-## 🚀 Scripts disponibles
+## 🚀 Scripts
 ```bash
-# Compilar y escuchar cambios en SCSS
+# Desarrollo: compila SCSS en watch + servidor local (http://localhost:5173)
 npm run dev
 
 # Compilación optimizada para producción
 npm run build
-
-# Servidor local para previsualizar (puerto 5173)
-npm run preview
 ```
 
 ---

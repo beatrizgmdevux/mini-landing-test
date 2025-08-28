@@ -1,7 +1,7 @@
 /* scss/layout/_services.scss */
 
-@use "../abstracts/variables" as *;
-@use "../abstracts/mixins" as *;
+@use "../theme/variables" as *;
+@use "../theme/mixins" as *;
 
 /* alternativa: chips */
 .site-services__list {

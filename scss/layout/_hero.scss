@@ -37,10 +37,11 @@
 
   h1 {
     text-align: start;
+    font-size: clamp(1.75rem, 5vw + 1rem, 3rem);
   }
 }
 
-.lead { color: $color-muted; font-size: 1.2rem; }
+.lead { color: $color-muted; font-size: 1rem; }
 
 .hero a.btn:hover {
     text-decoration: none;

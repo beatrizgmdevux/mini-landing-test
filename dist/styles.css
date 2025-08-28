@@ -104,10 +104,10 @@ a:focus-visible, button:focus-visible {
   background: #9e03d7;
   color: #f1f1f1;
   border-color: transparent;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 }
 .btn--primary:hover, .btn--primary:focus-visible {
-  filter: brightness(1.05);
+  filter: brightness(1.1);
   text-decoration: none;
 }
 
@@ -428,11 +428,12 @@ a.btn:active {
 }
 .hero__copy h1 {
   text-align: start;
+  font-size: clamp(1.75rem, 5vw + 1rem, 3rem);
 }
 
 .lead {
   color: #3e3e3e;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .hero a.btn:hover {

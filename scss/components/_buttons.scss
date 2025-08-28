@@ -22,11 +22,11 @@
   background: $color-primary;
   color: $color-primary-contrast;
   border-color: transparent;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 
   &:hover,
   &:focus-visible {
-    filter: brightness(1.05);
+    filter: brightness(1.1);
     text-decoration: none;
   }
 }

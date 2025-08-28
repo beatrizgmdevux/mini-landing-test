@@ -426,6 +426,9 @@ a.btn:active {
   gap: 1.5rem;
   padding: 1rem;
 }
+.hero__copy h1 {
+  text-align: start;
+}
 
 .lead {
   color: #3e3e3e;

@@ -34,6 +34,10 @@
   align-items: center;
   gap: $space-6;
   padding: $space-4;
+
+  h1 {
+    text-align: start;
+  }
 }
 
 .lead { color: $color-muted; font-size: 1.2rem; }

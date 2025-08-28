@@ -35,6 +35,7 @@
   overflow: clip;
   box-shadow: $shadow;
   display: grid;
+  align-content: start;
 }
 
 .card__media img { width: 100%; height: auto; }
@@ -42,7 +43,10 @@
 .card__body { 
     padding: $space-6; 
     display: grid; 
-    gap: $space-4; 
+    gap: $space-4;
+    text-align: justify;
+    text-align-last: left;
+    align-content: start;
 }
 
 .card__cta {

@@ -12,18 +12,22 @@
   border: 2px solid transparent;
   transition: transform .2s ease, background-color .2s ease, border-color .2s ease;
   will-change: transform;
+  text-decoration: none;
 }
 
 .btn:active { transform: translateY(1px); }
-.btn:hover { cursor: pointer; }
+.btn:hover { cursor: pointer; text-decoration: none;}
 
 .btn--primary {
   background: $color-primary;
   color: $color-primary-contrast;
   border-color: transparent;
+  font-size: 2rem !important;
+  text-decoration: none;
 }
 .btn--primary:hover, .btn--primary:focus-visible {
   filter: brightness(1.05);
+  text-decoration: none;
 }
 
 .btn--ghost {
@@ -34,4 +38,15 @@
 .btn--ghost:hover, .btn--ghost:focus-visible {
   background: rgba($color-focus, .75);
   border: 1px solid rgba($color-text,.35);
+}
+
+// Deshabilito el subrayado para los botones
+a.btn,
+a.btn:link,
+a.btn:visited,
+a.btn:hover,
+a.btn:focus,
+a.btn:focus-visible,
+a.btn:active {
+  text-decoration: none;
 }

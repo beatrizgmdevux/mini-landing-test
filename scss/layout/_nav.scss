@@ -9,13 +9,24 @@
   background: transparent;
   border: 0;
   padding: $space-3;
-  border-radius: .6rem;
+  border-radius: .6rem; 
 }
+
+.nav-toggle,
+.nav-toggle * {
+  cursor: pointer;
+}
+
+.nav-toggle:hover {
+  background: rgba($color-primary, .1);
+}
+
 .nav-toggle:focus-visible { @include focus-ring; }
 .nav-toggle__bar {
   width: 22px; height: 2px; 
   background: $color-primary;
   display: block;
+  cursor: pointer;
 }
 
 .site-nav {

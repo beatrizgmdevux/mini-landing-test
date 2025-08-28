@@ -1,5 +1,8 @@
 // scss/main.scss
 
+@use "base";
+@use "accessibility";
+
 // abstracts
 @use "abstracts/variables" as *;
 @use "abstracts/mixins" as *;
@@ -14,5 +17,4 @@
 @use "layout/hero" as *;
 @use "layout/nav" as *;
 
-@use "accessibility";
-@use "base";
+

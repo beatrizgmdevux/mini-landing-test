@@ -13,7 +13,6 @@ body {
   margin: 0;
   font-family: $font-family-base;
   color: $color-text;
-  background: linear-gradient(180deg, $color-bg 0%, $color-surface 100%);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -21,7 +20,7 @@ body {
 
 img { max-width: 100%; height: auto; display: block; }
 
-a { color: $color-primary; text-decoration: none; }
+a { color: $color-text; text-decoration: none; }
 a:not(.btn):hover { text-decoration: underline; }
 
 :focus-visible { @include focus-ring; }

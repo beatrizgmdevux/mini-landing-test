@@ -19,7 +19,7 @@
 }
 
 .hero__inner { 
-  padding-block: $space-12;
+  padding: $space-12;
   display: grid;
   place-items: center;
 
@@ -32,6 +32,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: $space-6;
+  padding: $space-4;
 }
 
 .lead { color: $color-muted; font-size: 1.2rem; }

@@ -44,6 +44,15 @@
     padding: $space-6; 
     display: grid; 
     gap: $space-4;
+
+}
+
+.card__body h3 {
+    text-align: start;
+    align-content: start;
+}
+
+.card__body p {
     text-align: justify;
     text-align-last: left;
     align-content: start;

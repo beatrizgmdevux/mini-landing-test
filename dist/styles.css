@@ -183,6 +183,14 @@ a.btn:active {
   padding: 1.5rem;
   display: grid;
   gap: 1rem;
+}
+
+.card__body h3 {
+  text-align: start;
+  align-content: start;
+}
+
+.card__body p {
   text-align: justify;
   text-align-last: left;
   align-content: start;
@@ -369,7 +377,7 @@ a.btn:active {
 }
 
 .hero__inner {
-  padding-block: 3rem;
+  padding: 3rem;
   display: grid;
   place-items: center;
 }
@@ -381,6 +389,8 @@ a.btn:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
 }
 
 .lead {
@@ -486,9 +496,9 @@ a.btn:active {
 .site-services__list li {
   display: inline-block;
   padding: 0.5rem 0.75rem;
-  border-radius: 999px;
+  border-radius: 1rem;
   border: 1px solid rgba(53, 53, 53, 0.16);
-  background: rgba(158, 3, 215, 0.06);
+  background: rgba(250, 250, 250, 0.06);
   color: #1e1e1e;
   white-space: nowrap;
 }

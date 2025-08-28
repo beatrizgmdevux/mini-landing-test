@@ -24,7 +24,7 @@
 
 .hero__copy {
   max-width: 60ch;
-  text-align: center;          // móvil centrado
+  text-align: start;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,6 +53,13 @@
   display: block;
   object-fit: cover;
   object-position: center;     // centra el recorte
+}
+
+/* Contenedor botones */
+.hero-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: $space-4;
 }
 
 /* Desktop: 2 columnas (texto | imagen) */

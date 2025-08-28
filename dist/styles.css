@@ -358,7 +358,7 @@ a.btn:active {
 .hero {
   min-height: calc(100vh - 72px);
   display: grid;
-  align-items: center;
+  align-items: flex-start;
   place-items: center;
   padding-top: 72px;
   background: radial-gradient(80% 60% at 70% 10%, rgba(158, 3, 215, 0.15) 0%, transparent 60%), #fafafa;
@@ -372,7 +372,7 @@ a.btn:active {
 
 .hero__copy {
   max-width: 60ch;
-  text-align: center;
+  text-align: justify;
   display: flex;
   flex-direction: column;
   justify-content: center;

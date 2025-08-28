@@ -1,6 +1,7 @@
 // scss/components/_cards.scss
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
+@use "sass:color";
 
 
 /** Estilos de las cards
@@ -85,6 +86,6 @@
 .card .btn--ghost:hover,
 .card .btn--ghost:focus-visible {
   text-decoration: underline;
-  color: mix($color-primary, #000, 85%);
+  color: color.mix($color-primary, #000, 85%);  // oscurezco un poco el botón al hacer hover sobre él
 }
 

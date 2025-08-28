@@ -1,0 +1,22 @@
+/* scss/layout/_services.scss */
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/* alternativa: chips */
+.site-services__list {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; 
+  justify-content: center;
+  flex-wrap: wrap; 
+  gap: $space-3;
+}
+.site-services__list li {
+  display: inline-block;
+  padding: .5rem .75rem;
+  border-radius: 999px;
+  border: 1px solid rgba($color-dark-bg, .16);
+  background: rgba($color-primary, .06);
+  color: $color-text;
+  white-space: nowrap;
+}

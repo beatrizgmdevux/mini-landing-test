@@ -12,8 +12,6 @@
 .site-footer {
   padding-block: $space-8;
   box-shadow: 0 -1px 0 rgba($color-dark-bg, .08) inset; /* línea superior sutil */
-  display: flex;
-  justify-content: space-between;
   background: linear-gradient(
         180deg,
         rgba($color-primary, .08) 0%,
@@ -27,7 +25,6 @@
   grid-template-columns: 1fr;
   align-items: center;
   gap: $space-4;
-  align-items: center;
   background: transparent;
 }
 
@@ -39,6 +36,8 @@
   display: grid; 
   gap: $space-2; 
   grid-auto-flow: column; 
+  align-items: center;
+  align-content: center;
   width: max-content;
 }
 
@@ -84,32 +83,41 @@
 // Versión para pantallas grandes
 @include mq-desktop {
   .footer-inner {
-    grid-template-columns: 1fr auto; /* enlaces ocupan, redes ancho contenido */
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
   }
 
   /* Enlaces en fila */
   .footer-links {
+    grid-column: 1;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
+    justify-self: start;
     gap: $space-4;
+  }
+
+  /* Firma */
+  .footer-credit {
+    grid-column: 2;
+    justify-self: center;
   }
 
   /* Redes en fila */
   .social {
+    grid-column: 3;
     grid-auto-flow: column;
     grid-auto-columns: max-content;   /* cada icono ocupa su contenido */
+    justify-self: end;
     gap: $space-3;
   }
 }
 
 /* Firma del footer */
 .footer-credit {
-  grid-column: 1 / -1;
   justify-self: center;
   text-align: center;
   margin-top: $space-4;
-  font-size: .875rem;
+  font-size: $space-4;
   color: $color-muted;
 
   p {
@@ -125,4 +133,10 @@
   width: auto;
   object-fit: contain;
   vertical-align: middle;
+}
+
+.footer-links,
+.social,
+.footer-credit {
+    align-self: center;
 }

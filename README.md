@@ -1,4 +1,4 @@
-# 🌊 Hotel Costa Aurora — Mini Landing (Prueba Técnica)
+# 🏝️ Hotel Costa Aurora — Mini Landing (Prueba Técnica)
 
 Landing responsive y accesible, maquetada con **HTML semántico** y **SCSS modular**.  
 Proyecto realizado como prueba técnica para el puesto de **Maquetación UI en ClickToTravel**.  

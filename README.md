@@ -60,7 +60,6 @@ npm run preview
 ---
 
 ## 📸 Vista previa
-*(Añadir capturas en la carpeta `public/` y enlazarlas aquí)*  
 ![Hero Screenshot](public/preview-hero.png)  
 ![Cards Screenshot](public/preview-cards.png)  
 

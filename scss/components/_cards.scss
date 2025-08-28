@@ -3,13 +3,12 @@
 @use "../abstracts/mixins" as *;
 @use "sass:color";
 
-
-/** Estilos de las cards
-    * Una columna en formato móvil (por defecto)
-    * Dos columnas en formato tablet
-    * Tres columnas en formato desktop
-    * En formato móvil y tablet el botón aparece siempre para más información
-    * En formato desktop el botón aparecerá cuando hagamos hover por la card
+/** Estilos de las cards 
+    * Una columna en formato móvil (por defecto) 
+    * Dos columnas en formato tablet 
+    * Tres columnas en formato desktop 
+    * En formato móvil y tablet el botón aparece siempre para más información 
+    * En formato desktop el botón aparecerá cuando hagamos hover por la card 
 */
 .cards {
   padding-block: $space-12;
@@ -29,10 +28,10 @@
 }
 
 .card {
-  background: rgba($color-bg,.04);
-  border: 1px solid rgba($color-bg,.1);
+  background: rgba($color-bg, .04);
+  border: 1px solid rgba($color-bg, .1);
   border-radius: $radius;
-  overflow: clip;
+  overflow: hidden;
   box-shadow: $shadow;
   display: grid;
   align-content: start;
@@ -40,52 +39,44 @@
 
 .card__media img { width: 100%; height: auto; }
 
-.card__body { 
-    padding: $space-6; 
-    display: grid; 
-    gap: $space-4;
+.card__body {
+  padding: $space-6;
+  display: grid;
+  gap: $space-4;
 
+  /* estructura: título | texto crece | CTA al final */
+  grid-template-rows: auto 1fr auto;
 }
 
-.card__body h3 {
-    text-align: start;
-    align-content: start;
-}
+.card__body h3 { text-align: start; }
+.card__body p  { text-align: justify; text-align-last: left; }
 
-.card__body p {
-    text-align: justify;
-    text-align-last: left;
-    align-content: start;
-}
-
+/* CTA: visible por defecto (móvil/tablet) y al fondo */
 .card__cta {
-  display: inline-block; 
-  opacity: 1;              // botón visible en tablet y móvil por defecto.
+  display: inline-block;
+  opacity: 1;
   transform: translateY(0);
   transition: opacity .3s ease, transform .3s ease;
+  margin-top: auto;        // empuja el CTA al final del body
+  justify-self: start;     // alinear a la izquierda (tipo enlace)
 }
 
+/* Desktop: aparece suave al hover/focus */
 @include mq-desktop {
   .card__cta {
-    opacity: 0;  // oculto el botón para pantallas grandes que aparece al hacer hover sobre la card
-    pointer-events: none; // no clicable mientras esté oculto
+    opacity: 0;
+    pointer-events: none;
     transform: translateY(10px);
-  } 
+  }
   .card:hover .card__cta,
   .card:focus-within .card__cta {
     opacity: 1;
     pointer-events: auto;
-    transform: translateY(0); // vuelve a su posición
+    transform: translateY(0);
   }
 }
 
-.cta {
-  padding-block: $space-12;
-  text-align: center;
-  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0));
-}
-
-/* Estilos específicos de los botones dentro de la card */
+/* Estilo "enlace" para el ghost SOLO dentro de cards */
 .card .btn--ghost {
   background: transparent;
   border: 0;
@@ -94,11 +85,17 @@
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 2px;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+    color: color.mix($color-primary, #000, 85%); // un poco más oscuro en hover
+  }
 }
 
-.card .btn--ghost:hover,
-.card .btn--ghost:focus-visible {
-  text-decoration: underline;
-  color: color.mix($color-primary, #000, 85%);  // oscurezco un poco el botón al hacer hover sobre él
+/* Sección CTA */
+.cta {
+  padding-block: $space-12;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0));
 }
-

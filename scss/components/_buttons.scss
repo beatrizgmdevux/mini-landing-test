@@ -1,8 +1,7 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// scss/components/_buttons.scss
-// Botones
+/* ========== Botones base ========== */
 .btn {
   display: inline-block;
   padding: .85rem 1.15rem;
@@ -13,25 +12,27 @@
   transition: transform .2s ease, background-color .2s ease, border-color .2s ease;
   will-change: transform;
   text-decoration: none;
+
+  &:active { transform: translateY(1px); }
+  &:hover  { cursor: pointer; text-decoration: none; }
 }
 
-.btn:active { transform: translateY(1px); }
-.btn:hover { cursor: pointer; text-decoration: none;}
-
+/* ========== Variante primaria ========== */
 .btn--primary {
   background: $color-primary;
   color: $color-primary-contrast;
   border-color: transparent;
-  font-size: 1.25rem !important;
-  text-decoration: none;
-}
-.btn--primary:hover, .btn--primary:focus-visible {
-  filter: brightness(1.05);
-  text-decoration: none;
+  font-size: 1.25rem;
+
+  &:hover,
+  &:focus-visible {
+    filter: brightness(1.05);
+    text-decoration: none;
+  }
 }
 
+/* ========== Variante ghost (genérica) ========== */
 .btn--ghost {
-  display: inline-block;
   padding: .85rem 1.15rem;
   border-radius: .75rem;
   font-weight: 600;
@@ -39,20 +40,19 @@
   border: 1px solid rgba($color-text,.35);
   background: rgba($color-bg, .20);
   color: $color-text;
+
+  &:hover,
+  &:focus-visible {
+    background: rgba($color-primary, .05);
+    border-color: rgba($color-text,.35);
+  }
 }
 
-.btn--ghost:hover, .btn--ghost:focus-visible {
-  background: rgba($color-primary, .05);
-  border: 1px solid rgba($color-text,.35);
-}
-
-// Deshabilito el subrayado para los botones
+/* Quita subrayado en cualquier <a class="btn ..."> */
 a.btn,
 a.btn:link,
 a.btn:visited,
 a.btn:hover,
 a.btn:focus,
 a.btn:focus-visible,
-a.btn:active {
-  text-decoration: none;
-}
+a.btn:active { text-decoration: none; }

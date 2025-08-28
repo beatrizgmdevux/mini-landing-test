@@ -37,5 +37,7 @@ El CSS compilado se genera en `dist/styles.css`.
 │   └── public/pietro-de-grandi-T7K4aEPoGGk-unsplash.jpg
 ├── dist/
 │   └── styles.css
+├── js/
+│   └── main.js
 └── package.json
 ```

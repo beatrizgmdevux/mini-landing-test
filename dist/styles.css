@@ -27,10 +27,12 @@ img {
 a {
   color: #1e1e1e;
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:not(.btn):hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 :focus-visible {
@@ -169,7 +171,7 @@ a.btn:active {
   border: 1px solid rgba(250, 250, 250, 0.1);
   border-radius: 1rem;
   overflow: clip;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 15px rgba(135, 135, 135, 0.25);
   display: grid;
   align-content: start;
 }
@@ -254,7 +256,7 @@ a.btn:active {
 
 .footer-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   align-items: center;
   gap: 1rem;
   align-items: center;
@@ -330,6 +332,29 @@ a.btn:active {
     gap: 0.75rem;
   }
 }
+/* Firma del footer */
+.footer-credit {
+  grid-column: 1/-1;
+  justify-self: center;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #3e3e3e;
+}
+.footer-credit p {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+}
+
+.footer-credit__logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
 .site-header {
   position: fixed;
   inset: 0 0 auto 0;
@@ -364,7 +389,7 @@ a.btn:active {
   display: inline-grid;
   place-items: center;
   border-radius: 50%;
-  border: 2px solid #9e03d7;
+  border: 1px solid rgba(53, 53, 53, 0.8);
 }
 
 .hero {

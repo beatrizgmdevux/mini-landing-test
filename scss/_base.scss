@@ -20,8 +20,8 @@ body {
 
 img { max-width: 100%; height: auto; display: block; }
 
-a { color: $color-text; text-decoration: none; }
-a:not(.btn):hover { text-decoration: underline; }
+a { color: $color-text; text-decoration: none; cursor: pointer;}
+a:not(.btn):hover { text-decoration: underline; cursor: pointer;}
 
 :focus-visible { @include focus-ring; }
 

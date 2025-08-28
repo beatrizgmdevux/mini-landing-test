@@ -24,7 +24,7 @@
 
 .footer-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   align-items: center;
   gap: $space-4;
   align-items: center;
@@ -101,4 +101,28 @@
     grid-auto-columns: max-content;   /* cada icono ocupa su contenido */
     gap: $space-3;
   }
+}
+
+/* Firma del footer */
+.footer-credit {
+  grid-column: 1 / -1;
+  justify-self: center;
+  text-align: center;
+  margin-top: $space-4;
+  font-size: .875rem;
+  color: $color-muted;
+
+  p {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    margin: 0;
+  }
+}
+
+.footer-credit__logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  vertical-align: middle;
 }

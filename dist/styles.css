@@ -99,7 +99,7 @@ a:focus-visible, button:focus-visible {
 }
 
 .btn--primary {
-  background: #b100f1;
+  background: #9e03d7;
   color: #f1f1f1;
   border-color: transparent;
   font-size: 1.25rem !important;
@@ -123,7 +123,7 @@ a:focus-visible, button:focus-visible {
 }
 
 .btn--ghost:hover, .btn--ghost:focus-visible {
-  background: rgba(177, 0, 241, 0.05);
+  background: rgba(158, 3, 215, 0.05);
   border: 1px solid rgba(30, 30, 30, 0.35);
 }
 
@@ -215,7 +215,7 @@ a.btn:active {
   background: transparent;
   border: 0;
   padding: 0;
-  color: #b100f1;
+  color: #9e03d7;
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -224,7 +224,7 @@ a.btn:active {
 .card .btn--ghost:hover,
 .card .btn--ghost:focus-visible {
   text-decoration: underline;
-  color: rgb(150.45, 0, 204.85);
+  color: rgb(134.3, 2.55, 182.75);
 }
 
 /** 
@@ -237,7 +237,7 @@ a.btn:active {
   box-shadow: 0 -1px 0 rgba(53, 53, 53, 0.08) inset; /* línea superior sutil */
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(180deg, rgba(177, 0, 241, 0.08) 0%, rgba(177, 0, 241, 0) 60%), #fafafa;
+  background: linear-gradient(180deg, rgba(158, 3, 215, 0.08) 0%, rgba(158, 3, 215, 0) 60%), #fafafa;
 }
 
 .footer-inner {
@@ -352,7 +352,7 @@ a.btn:active {
   display: inline-grid;
   place-items: center;
   border-radius: 50%;
-  border: 2px solid #b100f1;
+  border: 2px solid #9e03d7;
 }
 
 .hero {
@@ -361,7 +361,7 @@ a.btn:active {
   align-items: center;
   place-items: center;
   padding-top: 72px;
-  background: radial-gradient(80% 60% at 70% 10%, rgba(177, 0, 241, 0.15) 0%, transparent 60%), #fafafa;
+  background: radial-gradient(80% 60% at 70% 10%, rgba(158, 3, 215, 0.15) 0%, transparent 60%), #fafafa;
 }
 
 .hero__inner {
@@ -403,7 +403,7 @@ a.btn:active {
 }
 
 .nav-toggle:hover {
-  background: rgba(177, 0, 241, 0.1);
+  background: rgba(158, 3, 215, 0.1);
 }
 
 .nav-toggle:focus-visible {
@@ -414,7 +414,7 @@ a.btn:active {
 .nav-toggle__bar {
   width: 22px;
   height: 2px;
-  background: #b100f1;
+  background: #9e03d7;
   display: block;
   cursor: pointer;
 }
@@ -447,7 +447,7 @@ a.btn:active {
 
 .site-nav__list a:hover,
 .site-nav__list a:focus-visible {
-  color: #b100f1;
+  color: #9e03d7;
   text-decoration: none;
 }
 

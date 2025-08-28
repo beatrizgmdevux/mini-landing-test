@@ -35,18 +35,25 @@
   box-shadow: $shadow;
   display: grid;
 }
+
 .card__media img { width: 100%; height: auto; }
-.card__body { padding: $space-6; display: grid; gap: $space-4; }
+
+.card__body { 
+    padding: $space-6; 
+    display: grid; 
+    gap: $space-4; 
+}
+
 .card__cta {
   display: inline-block; 
-  opacity: 1;              // botón visible en móvil por defecto.
+  opacity: 1;              // botón visible en tablet y móvil por defecto.
   transform: translateY(0);
   transition: opacity .3s ease, transform .3s ease;
 }
 
 @include mq-desktop {
   .card__cta {
-    display: none;  // oculto el botón para pantallas grandes
+    opacity: 0;  // oculto el botón para pantallas grandes que aparece al hacer hover sobre la card
     pointer-events: none; // no clicable mientras esté oculto
     transform: translateY(10px);
   } 

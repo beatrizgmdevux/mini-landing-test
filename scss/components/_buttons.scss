@@ -31,12 +31,18 @@
 }
 
 .btn--ghost {
+  display: inline-block;
+  padding: .85rem 1.15rem;
+  border-radius: .75rem;
+  font-weight: 600;
+  letter-spacing: .2px;
+  border: 1px solid rgba($color-text,.35);
   background: rgba($color-bg, .20);
   color: $color-text;
-  border: 1px solid rgba($color-text,.35);
 }
+
 .btn--ghost:hover, .btn--ghost:focus-visible {
-  background: rgba($color-focus, .75);
+  background: rgba($color-primary, .05);
   border: 1px solid rgba($color-text,.35);
 }
 

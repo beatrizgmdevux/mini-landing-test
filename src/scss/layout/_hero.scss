@@ -1,36 +1,32 @@
 @use "../theme/variables" as *;
 @use "../theme/mixins" as *;
 
-// scss/layout/_hero.scss
-
+// HERO
 .hero {
   min-height: calc(100vh - $header-h);
   display: grid;
-  align-items: flex-start;
-  place-items: center;
+  align-items: stretch;        // que los hijos puedan estirar en vertical
   padding-top: $header-h;
   background:
-    radial-gradient(
-      80% 60% at 70% 10%,
-      rgba($color-primary, .15) 0%,
-      transparent 60%
-    ),
+    radial-gradient(80% 60% at 70% 10%, rgba($color-primary, .15) 0%, transparent 60%),
     $color-bg;
 }
 
-.hero__inner { 
-  padding: $space-12;
+.hero__inner {
+  /* mobile-first: una columna, todo centrado */
   display: grid;
-  place-items: center;
-
+  grid-template-columns: 1fr;
+  gap: $space-8;
+  align-items: center;
+  padding: $space-12;
+  min-height: inherit;         // hereda el min-height del .hero
 }
 
 .hero__copy {
-  max-width: 60ch; // 60 caracteres por línea
-  text-align: justify;
+  max-width: 60ch;
+  text-align: center;          // móvil centrado
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: $space-6;
   padding: $space-4;
@@ -43,6 +39,34 @@
 
 .lead { color: $color-muted; font-size: 1rem; }
 
-.hero a.btn:hover {
-    text-decoration: none;
+/* Imagen tipo COVER */
+.hero__img {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  border-radius: $radius;
+  aspect-ratio: 16 / 10;       // en móvil, proporción agradable
+}
+.hero__img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;     // centra el recorte
+}
+
+/* Desktop: 2 columnas (texto | imagen) */
+@include mq-desktop {
+  .hero__inner {
+    grid-template-columns: 1fr 1fr;   // texto izquierda, imagen derecha
+    align-items: stretch;              // que la imagen pueda ocupar todo el alto
+  }
+  .hero__copy {
+    text-align: start;                 // ya no centrado
+    align-items: flex-start;
+  }
+  .hero__img {
+    aspect-ratio: auto;
+    height: 100%;
+  }
 }

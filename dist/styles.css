@@ -495,13 +495,16 @@ a.btn:active {
     height: 100%;
   }
 }
+/* === Botón hamburguesa === */
 .nav-toggle {
   display: inline-grid;
+  place-items: center;
   gap: 4px;
   background: transparent;
   border: 0;
   padding: 0.75rem;
   border-radius: 0.6rem;
+  transition: background-color 0.15s ease;
 }
 
 .nav-toggle,
@@ -523,15 +526,49 @@ a.btn:active {
   height: 2px;
   background: #9e03d7;
   display: block;
-  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
 }
 
+/* Animación a “X” cuando aria-expanded=true */
+.nav-toggle[aria-expanded=true] .nav-toggle__bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded=true] .nav-toggle__bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded=true] .nav-toggle__bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* === Panel de navegación (mobile-first) === */
+/* header-inner es el “containing block” */
 .site-nav {
-  display: none;
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  top: calc(100% + 0.5rem); /* debajo del header */
+  z-index: 1001;
+  /* Estado: cerrado por defecto */
+  opacity: 0;
+  transform: translateY(-6px) scale(0.98);
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  /* Estética del panel */
+  background: rgba(250, 250, 250, 0.92);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(53, 53, 53, 0.12);
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  padding: 0.75rem;
 }
 
+/* Estado: abierto */
 .site-nav[data-open=true] {
-  display: block;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
 }
 
 .site-nav__list {
@@ -540,38 +577,43 @@ a.btn:active {
   padding: 0;
   display: grid;
   gap: 0.5rem;
-  background: rgba(0, 0, 0, 0.35);
-  padding: 1rem;
-  border-radius: 1rem;
 }
 
 .site-nav__list a {
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 0.75rem;
   border-radius: 0.5rem;
   color: #1e1e1e;
-  font-weight: bold;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .site-nav__list a:hover,
 .site-nav__list a:focus-visible {
   color: #9e03d7;
+  background: rgba(158, 3, 215, 0.06);
   text-decoration: none;
 }
 
+/* === Desktop: menú en línea a la derecha; sin panel === */
 @media (min-width: 1024px) {
-  .header-inner {
-    grid-template-columns: auto 1fr auto;
-  }
   .nav-toggle {
     display: none;
   }
   .site-nav {
-    display: block;
+    position: static;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
   }
   .site-nav__list {
+    display: grid;
     grid-auto-flow: column;
-    background: transparent;
-    padding: 0;
+    align-items: center;
+    gap: 1rem;
   }
 }
 /* scss/layout/_services.scss */

@@ -1,4 +1,4 @@
-// js/main.js
+// src/js/main.js
 (function () {
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.getElementById('primary-nav');
@@ -7,10 +7,12 @@
   function setOpen(open) {
     toggle.setAttribute('aria-expanded', String(open));
     nav.dataset.open = String(open);
+    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+
+    // Enfoca el primer enlace al abrir (accesibilidad)
     if (open) {
-      toggle.setAttribute('aria-label', 'Cerrar menú');
-    } else {
-      toggle.setAttribute('aria-label', 'Abrir menú');
+      const firstLink = nav.querySelector('a');
+      firstLink && firstLink.focus();
     }
   }
 
@@ -19,7 +21,7 @@
     setOpen(!isOpen);
   });
 
-  // Close with Escape
+  // Cerrar con Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       setOpen(false);
@@ -27,12 +29,18 @@
     }
   });
 
-  // Close when clicking outside on mobile
+  // Cerrar al hacer clic fuera
   document.addEventListener('click', (e) => {
     const isOpen = toggle.getAttribute('aria-expanded') === 'true';
     if (!isOpen) return;
     if (!nav.contains(e.target) && !toggle.contains(e.target)) {
       setOpen(false);
     }
+  });
+
+  // Cerrar al hacer clic en un enlace del menú
+  nav.addEventListener('click', (e) => {
+    const a = e.target.closest('a');
+    if (a) setOpen(false);
   });
 })();

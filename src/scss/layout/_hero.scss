@@ -14,22 +14,22 @@
 
 .hero__inner {
   /* mobile-first: una columna, todo centrado */
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
   gap: $space-4;
-  align-items: center;
-  padding: $space-6;
-  min-height: inherit;         // hereda el min-height del .hero
+  padding: $space-4;
 }
 
 .hero__copy {
+  flex: 0 1 auto;
   max-width: 60ch;
   text-align: start;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: $space-3;
-  padding: $space-2;
 
   h1 {
     font-size: clamp(1.35rem, 4.2vw + 0.6rem, 2.5rem);
@@ -61,8 +61,8 @@
 
 /* Imagen tipo COVER */
 .hero__img {
+  flex: 0 0 auto;
   width: 100%;
-  display: block;
   overflow: hidden;
   border-radius: $radius;
   aspect-ratio: 16 / 10;
@@ -79,14 +79,16 @@
 /* Desktop: 2 columnas (texto | imagen) */
 @include mq-desktop {
   .hero__inner {
-    grid-template-columns: 1fr 1fr;   // texto izquierda, imagen derecha
-    align-items: stretch;             // que la imagen pueda ocupar todo el alto
+    flex-direction: row;
+    align-items: stretch;
     gap: $space-8;
     padding: $space-12;
   }
 
   .hero__copy {
     text-align: start;
+    flex: 1 1 0; /* el copy crecerá a la par que la img */
+    justify-content: center;
     align-items: flex-start;
     gap: $space-4;
   }  
@@ -97,9 +99,8 @@
   }
 
   .hero__img {
+    flex: 1 1 0;
     aspect-ratio: auto;
-    height: auto;
-    align-self: stretch;
 
     img {
       width: 100%;

@@ -429,22 +429,22 @@ a.btn:active {
 
 .hero__inner {
   /* mobile-first: una columna, todo centrado */
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
   gap: 1rem;
-  align-items: center;
-  padding: 1.5rem;
-  min-height: inherit;
+  padding: 1rem;
 }
 
 .hero__copy {
+  flex: 0 1 auto;
   max-width: 60ch;
   text-align: start;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: 0.75rem;
-  padding: 0.5rem;
 }
 .hero__copy h1 {
   font-size: clamp(1.35rem, 4.2vw + 0.6rem, 2.5rem);
@@ -474,8 +474,8 @@ a.btn:active {
 
 /* Imagen tipo COVER */
 .hero__img {
+  flex: 0 0 auto;
   width: 100%;
-  display: block;
   overflow: hidden;
   border-radius: 1rem;
   aspect-ratio: 16/10;
@@ -491,13 +491,15 @@ a.btn:active {
 /* Desktop: 2 columnas (texto | imagen) */
 @media (min-width: 1024px) {
   .hero__inner {
-    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
     align-items: stretch;
     gap: 2rem;
     padding: 3rem;
   }
   .hero__copy {
     text-align: start;
+    flex: 1 1 0; /* el copy crecerá a la par que la img */
+    justify-content: center;
     align-items: flex-start;
     gap: 1rem;
   }
@@ -506,9 +508,8 @@ a.btn:active {
     gap: 1rem;
   }
   .hero__img {
+    flex: 1 1 0;
     aspect-ratio: auto;
-    height: auto;
-    align-self: stretch;
   }
   .hero__img img {
     width: 100%;
@@ -611,7 +612,7 @@ a.btn:active {
     opacity: 1;
     transform: none;
     pointer-events: auto;
-    background: transparent;
+    background: none;
     border: 0;
     box-shadow: none;
     padding: 0;
@@ -621,6 +622,7 @@ a.btn:active {
     grid-auto-flow: column;
     align-items: center;
     gap: 1rem;
+    background: none;
   }
 }
 /* scss/layout/_services.scss */

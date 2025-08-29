@@ -108,7 +108,8 @@
     opacity: 1;
     transform: none;
     pointer-events: auto;
-    background: transparent;
+
+    background: none;
     border: 0;
     box-shadow: none;
     padding: 0;
@@ -118,6 +119,7 @@
       grid-auto-flow: column;
       align-items: center;
       gap: $space-4;
+      background: none;
     }
   }
 }

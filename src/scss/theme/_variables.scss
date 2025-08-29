@@ -25,7 +25,7 @@ $space-8: 2rem;
 $space-12: 3rem;
 $radius: 1rem;
 $shadow: 0 5px 15px rgba(135, 135, 135, 0.25);
-$header-h: 72px;
+$header-h: clamp(56px, 6vw + 24px, 72px);
 
 // Breakpoints
 $bp-mobile: 767px;

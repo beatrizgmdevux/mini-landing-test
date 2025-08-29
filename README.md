@@ -28,23 +28,25 @@ Proyecto realizado como prueba técnica para el puesto de **Maquetación UI en C
 ## 📂 Estructura del proyecto
 ```
 .
-├── index.html              # Página principal
-├── scss/                   # Estilos SCSS organizados por módulos
-│   ├── theme/              # Variables y mixins
-│   ├── components/         # Botones, cards, etc.
-│   ├── layout/             # Header, nav, hero, footer, services
-│   ├── _base.scss          # Estilos globales
-│   ├── _accessibility.scss # Helpers de accesibilidad
-│   └── main.scss           # Punto de entrada
-├── public/                 # Recursos estáticos (logo, imágenes, iconos)
-│   ├── brand/              # Logos de marca
-│   ├── cards/              # Imágenes de las cards
-│   ├── social/             # Logos redes sociales
-│   └── preview-cards.scss  # Captura para previsualización
-├── dist/                   # CSS compilado
-├── js/                     # Lógica mínima: burger menu accesible
-├── package.json            # Scripts y dependencias
-└── README.md               # Este archivo
+├── index.html                  # Página principal
+├── scss/                       # Estilos SCSS organizados por módulos
+│   ├── theme/                  # Variables y mixins
+│   ├── components/             # Botones, cards, etc.
+│   ├── layout/                 # Header, nav, hero, footer, services
+│   ├── _base.scss              # Estilos globales
+│   ├── _accessibility.scss     # Helpers de accesibilidad
+│   └── main.scss               # Punto de entrada
+├── public/                     # Recursos estáticos (logo, imágenes, iconos)
+│   ├── brand/                  # Logos de marca
+│   ├── cards/                  # Imágenes de las cards
+│   ├── social/                 # Logos redes sociales
+│   └── preview-cards-web.scss  # Captura para previsualización
+│   └── preview-hero-web.scss   # Captura para previsualización
+│   └── preview-hero-mb.scss    # Captura para previsualización
+├── dist/                       # CSS compilado
+├── js/                         # Lógica mínima: burger menu accesible
+├── package.json                # Scripts y dependencias
+└── README.md                   # Este archivo
 ```
 
 ---
@@ -61,8 +63,9 @@ npm run build
 ---
 
 ## 📸 Vista previa
-![Hero Screenshot](public/preview-hero.png)  
-![Cards Screenshot](public/preview-cards.png)  
+![Hero Desktop Screenshot](public/preview-hero-web.png)
+![Hero Mobile Screenshot](public/preview-hero-mb.png)  
+![Cards Screenshot](public/preview-cards-web.png)  
 
 ---
 

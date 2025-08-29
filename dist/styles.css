@@ -505,22 +505,18 @@ a.btn:active {
   padding: 0.75rem;
   border-radius: 0.6rem;
   transition: background-color 0.15s ease;
+  /* Animación a “X” cuando aria-expanded=true */
 }
-
-.nav-toggle,
-.nav-toggle * {
+.nav-toggle, .nav-toggle * {
   cursor: pointer;
 }
-
 .nav-toggle:hover {
   background: rgba(158, 3, 215, 0.1);
 }
-
 .nav-toggle:focus-visible {
   outline: 3px solid #45dbe5;
   outline-offset: 2px;
 }
-
 .nav-toggle__bar {
   width: 22px;
   height: 2px;
@@ -528,49 +524,42 @@ a.btn:active {
   display: block;
   transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
 }
-
-/* Animación a “X” cuando aria-expanded=true */
 .nav-toggle[aria-expanded=true] .nav-toggle__bar:nth-child(1) {
   transform: translateY(6px) rotate(45deg);
 }
-
 .nav-toggle[aria-expanded=true] .nav-toggle__bar:nth-child(2) {
   opacity: 0;
 }
-
 .nav-toggle[aria-expanded=true] .nav-toggle__bar:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
 }
 
 /* === Panel de navegación (mobile-first) === */
-/* header-inner es el “containing block” */
 .site-nav {
   position: absolute;
   left: 1rem;
   right: 1rem;
-  top: calc(100% + 0.5rem); /* debajo del header */
+  top: calc(100% + 0.5rem);
   z-index: 1001;
-  /* Estado: cerrado por defecto */
+  /* Estado cerrado */
   opacity: 0;
   transform: translateY(-6px) scale(0.98);
   pointer-events: none;
   transition: opacity 0.18s ease, transform 0.18s ease;
-  /* Estética del panel */
-  background: rgba(250, 250, 250, 0.92);
+  /* Estética */
+  background: rgba(250, 250, 250, 0.99);
   backdrop-filter: blur(6px);
   border: 1px solid rgba(53, 53, 53, 0.12);
   border-radius: 1rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
   padding: 0.75rem;
+  /* Estado abierto */
 }
-
-/* Estado: abierto */
 .site-nav[data-open=true] {
   opacity: 1;
   transform: translateY(0) scale(1);
   pointer-events: auto;
 }
-
 .site-nav__list {
   list-style: none;
   margin: 0;
@@ -578,7 +567,6 @@ a.btn:active {
   display: grid;
   gap: 0.5rem;
 }
-
 .site-nav__list a {
   padding: 0.5rem 0.75rem;
   border-radius: 0.5rem;
@@ -586,15 +574,13 @@ a.btn:active {
   font-weight: 600;
   text-decoration: none;
 }
-
-.site-nav__list a:hover,
-.site-nav__list a:focus-visible {
+.site-nav__list a:hover, .site-nav__list a:focus-visible {
   color: #9e03d7;
   background: rgba(158, 3, 215, 0.06);
   text-decoration: none;
 }
 
-/* === Desktop: menú en línea a la derecha; sin panel === */
+/* === Desktop === */
 @media (min-width: 1024px) {
   .nav-toggle {
     display: none;

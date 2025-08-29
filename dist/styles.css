@@ -199,16 +199,12 @@ a.btn:active {
 
 .card__body {
   padding: 1.5rem;
-  display: grid;
-  gap: 1rem;
-  /* estructura: título | texto crece | CTA al final */
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  flex-direction: column;
 }
-
 .card__body h3 {
   text-align: start;
 }
-
 .card__body p {
   text-align: justify;
   text-align-last: left;
@@ -434,7 +430,7 @@ a.btn:active {
   align-items: stretch;
   justify-content: center;
   gap: 1rem;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .hero__copy {

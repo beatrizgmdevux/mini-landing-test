@@ -41,15 +41,18 @@
 
 .card__body {
   padding: $space-6;
-  display: grid;
-  gap: $space-4;
+  display: flex;
+  flex-direction: column;
 
-  /* estructura: título | texto crece | CTA al final */
-  grid-template-rows: auto 1fr auto;
+  h3 {
+    text-align: start;
+  }
+
+  p {
+    text-align: justify; 
+    text-align-last: left;
+  }
 }
-
-.card__body h3 { text-align: start; }
-.card__body p  { text-align: justify; text-align-last: left; }
 
 /* CTA: visible por defecto (móvil/tablet) y al fondo */
 .card__cta {
